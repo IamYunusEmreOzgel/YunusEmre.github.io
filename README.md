@@ -1,5 +1,5 @@
 
-# Prim Hesaplama Aracı
+# YunusEmre.github.io
 
 Bu çalışma, kişisel mühendislik portfolyo web sitemin kaynak kodlarını içermektedir. Site; mekatronik mühendisliği geçmişimi, endüstriyel otomasyon alanındaki saha deneyimimi, PLC programlama ve endüstriyel robot entegrasyonu çalışmalarımı profesyonel bir şekilde sunmak amacıyla hazırlanmıştır.
 
