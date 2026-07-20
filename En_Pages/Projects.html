@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ================= META AND PAGE INFORMATION ================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Industrial automation, PLC programming, robotic welding, packaging, vision, and simulation projects contributed to by Yunus Emre Özgel.">
+    <title>Projects | Yunus Emre Özgel</title>
+    <link rel="icon" type="image/png" href="../images/Favicon.png">
+
+    <!-- ================= CSS FILE ================= -->
+    <link rel="stylesheet" href="../Assets/style.css">
+</head>
+
+<body>
+    <!-- ================= JAVASCRIPT FILE ================= -->
+    <script src="../Assets/script.js"></script>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <a href="index_en.html" class="logo">Yunus Emre Özgel</a>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <nav id="navbar">
+            <a href="index_en.html">Home</a>
+            <a href="About_Me.html">About Me</a>
+            <a href="Projects.html" class="active-page">Projects</a>
+            <a href="Certificates.html">Certificates</a>
+            <a href="Contact.html">Contact</a>
+            <div class="language-switch">
+                <a href="../Pages/Projeler.html" class="language-btn active">TR</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="ProjelerPage">
+        <h1>Projects</h1>
+
+        <!-- ================= PROJECT PAGE INTRODUCTION ================= -->
+        <p class="projects-text">
+            Below are the projects I have contributed to in the fields of PLC programming,
+            industrial robot integration, and industrial automation systems.
+        </p>
+
+        <!-- ================= PROJECT LIST ================= -->
+        <section class="projects">
+
+            <!-- ================= ROBOTIC WELDING PROJECTS ================= -->
+            <div class="project-category">
+                <h2>Robotic Welding Projects</h2>
+            </div>
+
+            <!-- ================= MEGABRACE PROJECT ================= -->
+            <details class="project">
+                <summary>MEGABRACE | Robotic MIG Welding Cell</summary>
+                <p>A multi-robot MIG welding cell consisting of three KUKA robots and three fixtures mounted on an H-type positioner was developed. The system automatically performs welding operations on components containing approximately 230 weld points. The dual-axis positioner is controlled directly by the robots, enabling synchronized robot-axis motion. Collision avoidance algorithms were implemented to coordinate robot movements safely. Welding sequences were optimized, reducing the total cycle time to 720 seconds. Stable and repeatable welding performance was achieved using a Fronius TPS/i power source operating in PMC and CMT welding modes.</p>
+                <h2>My Responsibilities</h2>
+                <div class="tech-list">
+                    <span>Development of robot programs</span>
+                    <span>Development of H-type positioner motion sequences</span>
+                    <span>Development of robot synchronization and collision avoidance algorithms</span>
+                    <span>Optimization of welding sequences to reduce cycle time</span>
+                    <span>System commissioning, testing, and process optimization</span>
+                </div>
+            </details>
+
+            <!-- ================= TRAVERSE PROJECT ================= -->
+            <details class="project">
+                <summary>TRAVERSE | Robotic MIG Welding Cell</summary>
+                <p>A fully automated MIG welding cell equipped with two fixtures and one ABB industrial robot was developed. The system performs 32 welding operations automatically using a Fronius TPS/i welding power source. Weaving welding techniques were applied to improve weld quality, while TCP calibration was carried out using the ABB BullsEye system to achieve high welding accuracy. Robot programs, PLC software, HMI screens, and alarm management functions were developed. Welding parameters and cycle time were optimized to ensure a stable and efficient production process.</p>
+                <h2>My Responsibilities</h2>
+                <div class="tech-list">
+                    <span>Development of ABB robot programs</span>
+                    <span>Implementation of weaving welding applications</span>
+                    <span>TCP calibration using ABB BullsEye</span>
+                    <span>Development of HMI screens and alarm management</span>
+                </div>
+            </details>
+
+            <!-- ================= CNEO PROJECT ================= -->
+            <details class="project">
+                <summary>CNEO | Spot Welding Cell</summary>
+                <p>A fully automated spot welding system consisting of two production cells, seven fixtures, and two ABB industrial robots was developed. The robots perform welding operations using ARO welding guns, while weld control is provided through WTC Weld Timers. The system contains more than 80 welding points. The safety architecture was implemented using light curtains together with Safety Zone communication between the PLC and the robots. PLC software and safety configuration were developed, and welding parameters were optimized to ensure a stable and reliable production process.</p>
+                <h2>My Responsibilities</h2>
+                <div class="tech-list">
+                    <span>Development of safety configuration</span>
+                    <span>Development of ABB robot programs</span>
+                    <span>Development of fixture operating sequences</span>
+                    <span>Integration of WTC Weld Timer</span>
+                    <span>System testing and process optimization</span>
+                </div>
+            </details>
+
+            <!-- ================= B1318 PROJECT ================= -->
+            <details class="project">
+                <summary>B1318 | Spot Welding Cell</summary>
+                <p>A fully automated spot welding cell consisting of a single fixture and one ABB industrial robot was developed. The system performs 11 spot welds automatically using an ARO welding gun. Welding control is managed by a Bosch Weld Timer, while robot and fixture operation sequences were designed to match the production workflow. HMI screens for alarm management and production monitoring were also developed.</p>
+                <h2>My Responsibilities</h2>
+                <div class="tech-list">
+                    <span>Development of ABB robot programs</span>
+                    <span>Creation of fixture operating sequences</span>
+                    <span>Integration of Bosch Weld Timer</span>
+                    <span>Design of production counter and cycle monitoring screens</span>
+                    <span>Cycle time optimization and system testing</span>
+                </div>
+            </details>
+
+            <!-- ================= PACKAGING AND PALLETIZING PROJECTS ================= -->
+            <div class="project-category">
+                <h2>Packaging and Palletizing Projects</h2>
+            </div>
+
+            <!-- ================= B5 PROJECT ================= -->
+            <details class="project">
+                <summary>B5 | Automated Tea Glass Packaging Line</summary>
+                <p>A fully automated robotic packaging and cartoning system was developed for integration at the end of a tea glass production line. The system supports three different packaging types—window boxes, pastry boxes, and gift boxes—automatically sorting products, assembling cartons, and packaging them safely. After packaging, the products are automatically transferred into shipping cartons.</p>
+                <h2>My Responsibilities</h2>
+                <div class="tech-list">
+                    <span>Development of PLC control algorithms</span>
+                    <span>Creation of robot motion sequences</span>
+                    <span>Design of recipe-based packaging management</span>
+                    <span>Synchronization of conveyors and robots</span>
+                    <span>Development of a buffer system to prevent product accumulation</span>
+                </div>
+            </details>
+
+            <!-- ================= BORCAM PROJECT ================= -->
+            <details class="project">
+                <summary>BORCAM | Automated Packaging & Palletizing Line</summary>
+                <p>A fully automated two-cell packaging and palletizing system was developed for Borcam glass products of various sizes, heights, and diameters coming directly from the furnace. The system features recipe-based product management and stacks products using a servo-controlled transfer system and elevator mechanism with separator sheets. The stacked products are automatically boxed by a robotic packaging station and palletized in the second cell according to predefined pallet patterns.</p>
+                <h2>My Responsibilities</h2>
+                <div class="tech-list">
+                    <span>Development of robot programs</span>
+                    <span>Design of recipe-based product management</span>
+                    <span>Development of stacking and separator paper control sequences</span>
+                    <span>Implementation of product flow balancing algorithms</span>
+                    <span>System commissioning, testing, and process optimization</span>
+                </div>
+            </details>
+
+            <!-- ================= VISION-BASED AUTOMATION PROJECTS ================= -->
+            <div class="project-category">
+                <h2>Vision-Based Automation Projects</h2>
+            </div>
+
+            <!-- ================= TOPCOVER PROJECT ================= -->
+            <details class="project">
+                <summary>TOPCOVER | Sealer Application & Inline Quality Inspection System</summary>
+                <p>A dual-cell fully automated sealer application and inline quality inspection system was developed for battery cover components used in two different vehicle models. Each cell consists of four robots and two custom-designed fixtures. While one robot transfers the part, another simultaneously performs camera-guided precision sealant application. This parallel operation minimizes robot idle time, optimizes cycle time, and ensures uninterrupted production. Following sealant application, each component undergoes 100% inspection for thickness, width, and depth using a vision-based measurement station. Measurement data is processed by a Siemens PLC, automatically reported with date and time information, and archived in Microsoft Word format, providing full production traceability and quality assurance.</p>
+                <h2>My Responsibilities</h2>
+                <div class="tech-list">
+                    <span>Robot system integration</span>
+                    <span>Development of parallel robot operation and synchronization algorithms</span>
+                    <span>Cycle time optimization and production performance improvement</span>
+                </div>
+            </details>
+
+            <!-- ================= SK8 PROJECT ================= -->
+            <details class="project">
+                <summary>SK8 | Resin Residue Removal Cell for Laminated Glass Production</summary>
+                <p>A fully automated robotic cleaning cell was developed to remove resin residues remaining on laminated glass surfaces after production. The system consists of a glass handling robot, a vision system for bracket presence detection, an ISRA Vision inspection system for optical defect detection, and two trimming robots responsible for surface cleaning. Robot trajectories are generated dynamically according to the detected optical defects, while bracket presence verification prevents defective products from proceeding through the production line. Robot programs were developed, and trimming paths were optimized to improve cleaning quality and process stability.</p>
+                <h2>My Responsibilities</h2>
+                <div class="tech-list">
+                    <span>Development of robot programs</span>
+                    <span>Optimization of the bracket presence vision system</span>
+                    <span>Development of trimming robot operating sequences</span>
+                    <span>Optimization of robot trajectories and process parameters</span>
+                    <span>System testing, commissioning, and cycle time optimization</span>
+                </div>
+            </details>
+
+            <!-- ================= TF6 PROJECT ================= -->
+            <details class="project">
+                <summary>TF6 | Tempering Furnace Loading Line</summary>
+                <p>A fully automated loading system utilizing three KUKA industrial robots was developed to feed palletized glass panels of different models into a tempering furnace. Product logo verification was performed using a vision system, while angle and position corrections were achieved with a servo-driven Cartesian positioning table. Based on camera data, robot pick-and-place positions were calculated dynamically. Multi-robot coordination and servo-robot synchronization ensured safe and efficient system operation, while cycle time improvements increased overall production performance.</p>
+                <h2>My Responsibilities</h2>
+                <div class="tech-list">
+                    <span>Development of KUKA robot programs</span>
+                    <span>Implementation of dynamic position calculations based on vision data</span>
+                    <span>Development of multi-robot coordination algorithms</span>
+                    <span>Cycle time optimization and system performance improvement</span>
+                    <span>System testing, commissioning, and cycle time optimization</span>
+                </div>
+            </details>
+
+            <!-- ================= SIMULATION AND PERSONAL PROJECTS ================= -->
+            <div class="project-category">
+                <h2>Simulation and Personal Projects</h2>
+            </div>
+
+            <!-- ================= ROBOT-BASED SIMULATION PROJECT ================= -->
+            <details class="project">
+                <summary>Robot-Based Part Sorting & Pattern Application System | Simulation Project</summary>
+                <p>A simulation project was developed in which incoming parts on a conveyor are automatically measured and inspected. Parts within the specified tolerance range receive an automatic pattern application by a Mitsubishi Electric robot, while non-conforming parts are automatically diverted to a scrap bin. The system was designed with conveyor tracking technology, enabling synchronized operation on moving products. A control algorithm was implemented to stop production when ten rejected parts accumulate in the scrap bin and safely resume operation after operator intervention. Robot programs were developed using MELFA BASIC, robot–conveyor communication and I/O integration were completed, and the system was validated in RT ToolBox3. The overall cycle time was optimized to 21 seconds.</p>
+                <h2>My Responsibilities</h2>
+                <div class="tech-list">
+                    <span>Development of MELFA BASIC robot programs</span>
+                    <span>Creation of the conveyor tracking scenario</span>
+                    <span>Development of measurement control and scrap sorting algorithms</span>
+                    <span>Simulation validation in RT ToolBox3</span>
+                </div>
+            </details>
+        </section>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Yunus Emre Özgel | All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

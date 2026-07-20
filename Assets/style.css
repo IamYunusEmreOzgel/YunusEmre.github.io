@@ -1,0 +1,871 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Tüm HTML elemanlarında varsayılan boşlukları sıfırlar ve kutu modelini daha kontrollü hale getirir. */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Sayfa içi bağlantılarda kaydırma hareketini yumuşatır. */
+html{
+    scroll-behavior:smooth;
+}
+
+/* Sitenin genel arka planını, yazı rengini ve font ailesini belirler. */
+body{
+    background:#121212;
+    color:#ffffff;
+    font-family:'Poppins', sans-serif;
+    overflow-x:hidden;
+}
+
+/* Linklerin varsayılan alt çizgisini kaldırır ve rengini bulunduğu yerden almasını sağlar. */
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* Mouse hareketini takip eden ışık efektinin görünümünü belirler. */
+#cursor-light{
+    position:fixed;
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(228,225,222,.35) 75%, rgba(220,225,229,.15) 75%, transparent 10%);
+    transform:translate(-30%,-30%);
+    pointer-events:none;
+    filter:blur(65px);
+    z-index:9999;
+}
+
+/* Üst menü alanının genel yerleşimini ve sabit kalma davranışını ayarlar. */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:30px 50px;
+    background:#36404a;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+/* Sol üstteki logo / isim bağlantısının görünümünü belirler. */
+.logo{
+    color:#ffffff;
+    font-size:30px;
+    font-weight:700;
+}
+
+/* Mobil görünümde kullanılacak menü ikonunun başlangıç görünümünü ayarlar. */
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    color:#ffffff;
+    cursor:pointer;
+}
+
+/* Navigasyon linklerini yatay hizalar. */
+nav{
+    display:flex;
+    align-items:center;
+    gap:35px;
+}
+
+/* Menü linklerinin alt çizgi efektinin doğru konumlanmasını sağlar. */
+nav a{
+    position:relative;
+}
+
+/* Menü linki hover durumunda veya aktif sayfadaysa mavi renge döner. */
+nav a:hover,
+nav a.active-page{
+    color:#4ea8ff;
+}
+
+/* Menü linklerinin altında animasyonlu çizgi oluşturur. */
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    width:0;
+    height:4px;
+    background:#4ea8ff;
+    transition:1s;
+}
+
+/* Hover veya aktif sayfa durumunda alt çizgiyi tam genişliğe çıkarır. */
+nav a:hover::after,
+nav a.active-page::after{
+    width:100%;
+}
+
+/* Dil değiştirme butonlarının hizasını ayarlar. */
+.language-switch{
+    display:flex;
+    align-items:center;
+}
+
+/* Dil butonunun kenarlık ve boşluk yapısını belirler. */
+.language-btn{
+    padding:6px 12px;
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:8px;
+}
+
+/* Ana sayfa hero bölümünün genel yerleşimini ayarlar. */
+.hero{
+    width:88%;
+    margin:0 auto;
+    min-height:calc(100vh - 118px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:65px;
+    padding:25px 0 45px;
+}
+
+/* Hero bölümündeki metin alanının genişliğini sınırlar. */
+.hero-left{
+    flex:1;
+    max-width:750px;
+}
+
+/* Hero bölümündeki ana başlık stilini belirler. */
+.hero-left h1{
+    margin-top:0;
+    margin-bottom:18px;
+    font-size:31px;
+    line-height:1.2;
+    color:#ffffff;
+}
+
+/* Hero bölümündeki ikinci başlık / meslek açıklamasını biçimlendirir. */
+.hero-left h2{
+    max-width:730px;
+    margin-bottom:20px;
+    font-size:25px;
+    line-height:1.45;
+    color:#b39b9b;
+}
+
+/* Hero bölümündeki açıklama metinlerini biçimlendirir. */
+.hero-left p,
+.hero-left .description{
+    margin-bottom:16px;
+    font-size:21px;
+    line-height:1.45;
+    color:#ffffff;
+}
+
+/* Hero bölümündeki butonları yan yana dizer. */
+.button-group{
+    display:flex;
+    gap:17px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+/* Ana sayfadaki yönlendirme butonlarının temel tasarımını belirler. */
+.hero-button{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    min-width:165px;
+    padding:13px 28px;
+    border-radius:12px;
+    background:#4ea8ff;
+    color:#ffffff;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s ease;
+    border:2px solid transparent;
+}
+
+/* Buton üzerine gelindiğinde şeffaf ve kenarlıklı görünüm sağlar. */
+.hero-button:hover{
+    background:transparent;
+    border-color:#4ea8ff;
+    color:#4ea8ff;
+    transform:translateY(-3px);
+}
+
+/* Profil fotoğrafı alanını hizalar. */
+.hero-image{
+    width:38%;
+    display:flex;
+    justify-content:center;
+}
+
+/* Profil fotoğrafının boyutunu, çerçevesini ve geçiş efektini ayarlar. */
+.hero-image img{
+    width:340px;
+    height:340px;
+    border-radius:25%;
+    object-fit:cover;
+    border:5px solid #ebebeb;
+    transition:3s;
+}
+
+/* Profil fotoğrafına hover büyüme efekti verir. */
+.hero-image img:hover{
+    transform:scale(1.12);
+}
+
+/* Genel bölüm boşluklarını belirler. */
+.section{
+    padding:120px 8%;
+}
+
+/* Bölüm başlıklarının genel görünümünü ayarlar. */
+.section h2{
+    text-align:center;
+    font-size:60px;
+    margin-bottom:30px;
+    color:#ffffff;
+}
+
+/* İçerik genişliğini merkezi ve kontrollü hale getirir. */
+.container{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+/* Ana sayfadaki "Ben Kimim" ve "Teknolojiler" bölümlerinin boşluklarını ayarlar. */
+.BenKimim,
+.technologies{
+    padding:80px 20px;
+}
+
+/* Bu bölümlerdeki başlıkları ortalar. */
+.BenKimim h2,
+.technologies h2{
+    text-align:center;
+    font-size:2.2rem;
+    margin-bottom:50px;
+}
+
+/* Ben Kimim kartlarını iki sütunlu grid yapısına yerleştirir. */
+.BenKimim-container{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+/* Teknik yetkinlik kartlarını üç sütunlu grid yapısına yerleştirir. */
+.technologies-container{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* Ana sayfa kartlarının ortak görsel tasarımını belirler. */
+.BenKimim-card,
+.technologies-card{
+    background:#2d3545;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:35px 30px;
+    transition:.3s ease;
+}
+
+/* Kartlara hover sırasında yükselme ve vurgu efekti verir. */
+.BenKimim-card:hover,
+.technologies-card:hover{
+    transform:translateY(-8px);
+    border-color:#4ea8ff;
+    box-shadow:0 15px 35px rgba(78,168,255,.15);
+}
+
+/* Ben Kimim kart başlıklarını biçimlendirir. */
+.BenKimim-card h3{
+    text-align:center;
+    font-size:30px;
+    margin-bottom:20px;
+    color:#ffffff;
+}
+
+/* Ben Kimim kart açıklamalarını biçimlendirir. */
+.BenKimim-card p{
+    text-align:center;
+    color:#c3adad;
+    line-height:20px;
+    font-size:20px;
+}
+
+/* Teknik yetkinlik kart başlıklarını biçimlendirir. */
+.technologies-card h3{
+    font-size:1.4rem;
+    margin-bottom:20px;
+    color:#ffffff;
+}
+
+/* Teknik yetkinlik kart açıklamalarını biçimlendirir. */
+.technologies-card p{
+    color:#d5d5d5;
+    line-height:1.8;
+    font-size:1rem;
+}
+
+/* Alıntı bölümünü ortalar. */
+.quote{
+    text-align:center;
+}
+
+/* Alıntı metninin genişlik, boyut ve italik stilini belirler. */
+.quote blockquote{
+    max-width:850px;
+    margin:auto;
+    font-size:32px;
+    line-height:1.8;
+    color:#d9d9d9;
+    font-style:italic;
+}
+
+/* Ana sayfadaki iletişim alanını ortalar. */
+.contact{
+    text-align:center;
+}
+
+/* İletişim açıklama metnini sınırlar ve boşluk verir. */
+.contact p{
+    max-width:650px;
+    margin:auto;
+    margin-bottom:50px;
+    line-height:1.8;
+}
+
+/* İletişim butonunun görünümünü belirler. */
+.contact .btn{
+    display:inline-block;
+    padding:25px 40px;
+    border-radius:50px;
+    background:#4da3ff;
+    color:#ffffff;
+    transition:.8s;
+}
+
+/* İletişim butonuna hover efekti verir. */
+.contact .btn:hover{
+    transform:translateY(-8px);
+    background:#dde0e3;
+    color:#121212;
+}
+
+/* Sayfa alt bilgisinin görünümünü belirler. */
+footer{
+    width:100%;
+    padding:20px 0;
+    text-align:center;
+    background:#36404a;
+    color:#ffffff;
+}
+
+/* Alt sayfaların genel içerik genişliğini ayarlar. */
+.Hakkimdapage,
+.ProjelerPage,
+.SertifikalarPage,
+.IletisimPage{
+    width:85%;
+    margin:40px auto;
+}
+
+/* Alt sayfalardaki ana başlıkları biçimlendirir. */
+.Hakkimdapage h1,
+.ProjelerPage h1,
+.SertifikalarPage h1,
+.IletisimPage h1{
+    font-size:55px;
+    color:#ffffff;
+    margin-bottom:35px;
+}
+
+/* Hakkımda sayfasındaki alt başlıkları biçimlendirir. */
+.Hakkimdapage h2{
+    font-size:25px;
+    color:#ffffff;
+    margin-top:25px;
+    margin-bottom:25px;
+}
+
+/* Hakkımda sayfasındaki paragrafların okunabilirliğini artırır. */
+.Hakkimdapage p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:25px;
+    color:#dfd9d9;
+}
+
+/* Projeler sayfasındaki açıklama paragraflarını biçimlendirir. */
+.ProjelerPage p{
+    font-size:18px;
+    line-height:25px;
+    margin-bottom:25px;
+    color:#dfd9d9;
+}
+
+/* Hakkımda sayfasındaki vurgulu metinleri belirginleştirir. */
+.Hakkimdapage strong{
+    font-size:20px;
+    font-weight:bold;
+    line-height:25px;
+    color:#ffffff;
+}
+
+/* Hakkımda sayfasındaki yaklaşım kartlarını iki sütunlu grid yapısına yerleştirir. */
+.approach-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    margin:30px 0;
+}
+
+/* Yaklaşım kartlarının temel tasarımını belirler. */
+.approach-card{
+    background:#111827;
+    border:1px solid #334155;
+    border-left:4px solid #4ea8ff;
+    border-radius:12px;
+    padding:24px;
+}
+
+/* Yaklaşım kart başlıklarının boşluklarını düzenler. */
+.approach-card h2{
+    margin-top:0;
+    margin-bottom:15px;
+}
+
+/* Yaklaşım kart paragraflarında gereksiz alt boşluğu kaldırır. */
+.approach-card p{
+    margin-bottom:0;
+}
+
+/* Teknik beceri kartlarını iki sütunlu grid yapısına yerleştirir. */
+.skills{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+    margin:30px 0;
+}
+
+/* Teknik beceri kartlarının temel tasarımını belirler. */
+.skill-card{
+    background:#2a2f3d;
+    border:1px solid #334155;
+    border-radius:10px;
+    padding:25px;
+}
+
+/* Teknik beceri kart başlıklarını biçimlendirir. */
+.skill-card h3{
+    color:#ffffff;
+    margin-bottom:15px;
+}
+
+/* Teknik beceri kart paragraflarını biçimlendirir. */
+.skill-card p{
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:0;
+}
+
+/* Proje kategori başlıklarını kart yapısı olmadan sade şekilde ayarlar. */
+.project-category{
+    margin:45px 0 20px;
+    padding:0;
+}
+
+/* Proje kategori başlıklarının düz beyaz ve daha büyük görünmesini sağlar. */
+.ProjelerPage .project-category h2{
+    margin:0;
+    padding:0;
+    color:#ffffff;
+    font-size:28px;
+    font-weight:700;
+}
+
+/* Her bir proje detay kutusunun temel görünümünü belirler. */
+.project{
+    border:1px solid #334155;
+    border-radius:10px;
+    margin-bottom:20px;
+    background:#111827;
+    overflow:hidden;
+}
+
+/* Açılır kapanır proje başlığını biçimlendirir. */
+.project summary{
+    padding:20px;
+    cursor:pointer;
+    font-size:24px;
+    font-weight:600;
+    color:#ffffff;
+}
+
+/* Proje içeriğindeki metin ve liste alanlarına iç boşluk verir. */
+.project p,
+.project h2,
+.project h3,
+.project .tech-list{
+    padding:0 20px 15px;
+}
+
+/* Açılan proje kutusunun kenarlığını vurgular. */
+.project[open]{
+    border-color:#ffffff;
+}
+
+/* Projeler sayfasındaki ikinci seviye başlıkları daha okunaklı hale getirir. */
+.ProjelerPage h2{
+    font-size:23px;
+    color:#ffffff;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+/* Proje görev listelerini dikey şekilde sıralar. */
+.tech-list{
+    display:flex;
+    flex-direction:column;
+    font-size:15px;
+    gap:8px;
+}
+
+/* Görev listesi maddelerinin başına onay işareti ekler. */
+.tech-list span::before{
+    content:"✔ ";
+    color:#00bfff;
+    font-weight:bold;
+}
+
+/* Sertifikalar tablosunun genişliğini ve genel hizasını ayarlar. */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+/* Tablo hücrelerinin kenarlık ve iç boşluklarını belirler. */
+th,td{
+    border:2px solid #ffffff;
+    padding:12px;
+    text-align:left;
+}
+
+/* Tablo başlık satırının arka plan ve yazı rengini belirler. */
+th{
+    background:#24344e;
+    color:#eaf1f4;
+}
+
+/* Tablo veri hücrelerinin arka plan ve yazı rengini belirler. */
+td{
+    background:#0a1120;
+    color:#eaf1f4;
+}
+
+/* Sertifika görseli açıldığında kullanılan modal alanını hazırlar. */
+.image-modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.85);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+/* Modal içindeki görselin boyutunu ve çerçevesini belirler. */
+.image-modal img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:10px;
+    border:3px solid #ffffff;
+}
+
+/* Modal alanında tıklanabilirlik hissi oluşturur. */
+.image-modal:hover{
+    cursor:pointer;
+}
+
+/* İletişim sayfasındaki bilgi kartlarının temel görünümünü belirler. */
+.contact-card{
+    background:#111827;
+    border:4px solid #334155;
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:20px;
+    transition:.3s;
+}
+
+/* İletişim kartlarına hover sırasında gölge efekti verir. */
+.contact-card:hover{
+    box-shadow:0 0 20px #c6c7c8;
+}
+
+/* İletişim bağlantılarının sade görünümünü belirler. */
+.contact-link{
+    display:inline-block;
+    margin-top:8px;
+    padding:0;
+    border:none;
+    border-radius:0;
+    background:transparent;
+    color:#cbd5e1;
+    font-size:15px;
+    font-weight:500;
+    transition:.3s ease;
+}
+
+/* İletişim bağlantılarına hover sırasında renk ve hareket efekti verir. */
+.contact-link:hover{
+    color:#4ea8ff;
+    transform:translateX(4px);
+}
+
+/* 1200px altındaki ekranlarda hero bölümünü daha kompakt hale getirir. */
+@media screen and (max-width:1200px){
+    .hero{
+        width:92%;
+        gap:45px;
+    }
+
+    .hero-left h1{
+        font-size:28px;
+    }
+
+    .hero-left h2{
+        font-size:23px;
+    }
+
+    .hero-left p,
+    .hero-left .description{
+        font-size:19px;
+    }
+
+    .hero-image img{
+        width:320px;
+        height:320px;
+    }
+}
+
+/* 768px altındaki ekranlarda mobil uyumlu görünümü aktif eder. */
+@media screen and (max-width:768px){
+    header{
+        padding:15px 20px;
+    }
+
+    .logo{
+        font-size:24px;
+    }
+
+    .menu-toggle{
+        display:block;
+        font-size:30px;
+        user-select:none;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#36404a;
+        flex-direction:column;
+        align-items:center;
+        padding:20px 0;
+        gap:20px;
+        box-shadow:0 10px 20px rgba(0,0,0,.3);
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    nav a{
+        margin:0;
+        font-size:18px;
+    }
+
+    .hero{
+        width:100%;
+        min-height:calc(100vh - 70px);
+        flex-direction:column-reverse;
+        text-align:center;
+        padding:35px 20px 45px;
+        gap:20px;
+    }
+
+    .hero-left{
+        width:100%;
+    }
+
+    .hero-left h1{
+        margin-top:0;
+        font-size:27px;
+    }
+
+    .hero-left h2{
+        font-size:20px;
+    }
+
+    .hero-left p,
+    .hero-left .description{
+        font-size:17px;
+    }
+
+    .button-group{
+        justify-content:center;
+        margin-top:26px;
+    }
+
+    .hero-image{
+        width:100%;
+        margin-bottom:10px;
+    }
+
+    .hero-image img{
+        width:225px;
+        height:225px;
+    }
+
+    .section{
+        padding:60px 20px;
+    }
+
+    .section h2,
+    .BenKimim h2,
+    .technologies h2{
+        font-size:1.8rem;
+        margin-bottom:35px;
+    }
+
+    .BenKimim-container,
+    .technologies-container,
+    .skills,
+    .approach-grid{
+        width:100%;
+        display:grid;
+        grid-template-columns:1fr;
+        justify-items:center;
+        place-items:center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .BenKimim-card,
+    .technologies-card,
+    .skill-card,
+    .approach-card{
+        width:100%;
+        max-width:400px;
+        justify-self:center;
+        margin-left:auto;
+        margin-right:auto;
+        padding:25px;
+    }
+
+    .project-category{
+        width:100%;
+        max-width:none;
+        margin:38px 0 18px;
+    }
+
+    .ProjelerPage .project-category h2{
+        text-align:left;
+        font-size:24px;
+    }
+
+    .project summary{
+        font-size:21px;
+    }
+
+    .technologies-card h3{
+        font-size:1.2rem;
+    }
+
+    .Hakkimdapage,
+    .ProjelerPage,
+    .SertifikalarPage,
+    .IletisimPage{
+        width:100%;
+        padding-left:20px;
+        padding-right:20px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .Hakkimdapage h1,
+    .Hakkimdapage h2,
+    .ProjelerPage h1,
+    .SertifikalarPage h1,
+    .IletisimPage h1{
+        text-align:center;
+    }
+
+    table,
+    tbody,
+    tr,
+    td{
+        display:block;
+        width:100%;
+    }
+
+    table{
+        border-collapse:separate;
+        border-spacing:0;
+        white-space:normal;
+    }
+
+    table tr:first-child{
+        display:none;
+    }
+
+    table tr{
+        margin-bottom:18px;
+        border:1px solid #334155;
+        border-radius:12px;
+        overflow:hidden;
+        background:#0a1120;
+    }
+
+    table td{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:18px;
+        border:none;
+        border-bottom:1px solid #334155;
+        padding:14px 16px;
+        text-align:right;
+        white-space:normal;
+    }
+
+    table td:last-child{
+        border-bottom:none;
+    }
+
+    table td::before{
+        content:attr(data-label);
+        flex:0 0 42%;
+        text-align:left;
+        color:#4ea8ff;
+        font-weight:600;
+    }
+
+    table td button{
+        max-width:170px;
+    }
+
+    footer{
+        text-align:center;
+        padding:20px;
+    }
+}

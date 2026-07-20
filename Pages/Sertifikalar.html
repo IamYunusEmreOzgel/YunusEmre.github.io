@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <!-- ================= META VE SAYFA BİLGİLERİ ================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yunus Emre Özgel'in endüstriyel otomasyon, kalite, yalın üretim, robot programlama, Excel ve mühendislik araçları alanlarındaki sertifikaları.">
+    <link rel="icon" type="image/png" href="../images/Favicon.png">
+    <title>Sertifikalar | Yunus Emre Özgel</title>
+
+    <!-- ================= CSS DOSYASI ================= -->
+    <link rel="stylesheet" href="../Assets/style.css">
+
+</head>
+
+<body>
+     <!-- ================= JAVASCRIPT DOSYASI ================= -->
+     <script src="../Assets/script.js"></script>
+   
+     <!-- ================= HEADER ================= -->
+
+<header>
+    <a href="../index.html" class="logo">Yunus Emre Özgel</a>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        &#9776;
+    </div>
+    <nav id="navbar">
+        <a href="../index.html">Ana Sayfa</a>
+        <a href="Hakkimda.html">Hakkımda</a>
+        <a href="Projeler.html">Projeler</a>
+        <a href="Sertifikalar.html" class="active-page">Sertifikalar</a>
+        <a href="Iletisim.html">İletişim</a>
+        <div class="language-switch">
+        <a href="../En_Pages/Certificates.html" class="language-btn active">EN</a>
+        </div>
+    </nav>
+</header>
+
+    <!-- ================= SERTİFİKALAR ================= -->
+
+    <section class="SertifikalarPage">
+        <h1>Sertifikalarım</h1>
+
+<!-- ================= SERTİFİKA TABLOSU ================= -->
+<table>
+    <tr>
+        <th>Sertifika Adı</th>
+        <th>Veren Kurum</th>
+        <th>Tarih</th>
+        <th>Sertifika</th>
+    </tr>
+
+     <tr>
+    <td data-label="Sertifika Adı">IATF 16949 CORE TOOLS (APQP-PPAP-FMEA-SPC-MSA)</td>
+        <td data-label="Veren Kurum">İstanbul Kalite Akademisi</td>
+        <td data-label="Tarih">08.05.2026</td>
+        <td data-label="Sertifika">
+        <button class="btn1"
+        onclick="openImage('../Sertifikalar/IATF16949_Core_Tools_Cert.jpg')">
+        Sertifikayı Gör
+        </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td data-label="Sertifika Adı">ISO 9001 Kalite Yönetimi</td>
+        <td data-label="Veren Kurum">İstanbul Kalite Akademisi</td>
+        <td data-label="Tarih">28.04.2026</td>
+        <td data-label="Sertifika">
+        <button class="btn1" onclick="openImage('../Sertifikalar/ISO9001_Cert.jpg')">
+        Sertifikayı Gör
+        </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td data-label="Sertifika Adı">Lean Six Sigma Yellow Belt</td>
+        <td data-label="Veren Kurum">Six Sigma Academy Istanbul</td>
+        <td data-label="Tarih">20.04.2026</td>
+        <td data-label="Sertifika">
+        <button class="btn1" onclick="openImage('../Sertifikalar/Lean_Six_Sigma_Cert.jpg')">
+        Sertifikayı Gör
+        </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td data-label="Sertifika Adı">Kaizen - Kaizen Yaklaşımıyla Sürekli İyileştirme Eğitimi</td>
+        <td data-label="Veren Kurum">Engineering Academy</td>
+        <td data-label="Tarih">14.04.2026</td>
+        <td data-label="Sertifika">
+        <button class="btn1" onclick="openImage('../Sertifikalar/Kaizen.jpg')">
+        Sertifikayı Gör
+        </button>
+        </td>
+    </tr>
+    
+    <tr>
+        <td data-label="Sertifika Adı">Microsoft Excel - Excel from Beginner to Advanced</td>
+        <td data-label="Veren Kurum">Udemy</td>
+        <td data-label="Tarih">18.02.2026</td>
+        <td data-label="Sertifika">
+        <button class="btn1" onclick="openImage('../Sertifikalar/Microsoft_Excell_Cert.jpg')">
+        Sertifikayı Gör
+        </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td data-label="Sertifika Adı">Robot Programlanması 1</td>
+        <td data-label="Veren Kurum">KUKA</td>
+        <td data-label="Tarih">17.01.2025</td>
+        <td data-label="Sertifika">
+        <button class="btn1" onclick="openImage('../Sertifikalar/Kuka_Robot_Programming_Cert.jpg')">
+        Sertifikayı Gör
+        </button>
+        </td>
+    </tr>
+
+    <tr>
+        <td data-label="Sertifika Adı">Complete SolidWorks Beginners Course</td>
+        <td data-label="Veren Kurum">Udemy</td>
+        <td data-label="Tarih">31.07.2023</td>
+        <td data-label="Sertifika">
+        <button class="btn1" onclick="openImage('../Sertifikalar/Solidworks_Cert.jpg')">
+        Sertifikayı Gör
+        </button>
+        </td>
+    </tr>
+
+</table>
+    </section>
+
+<!-- ================= SERTİFİKA GÖRSEL MODALI ================= -->
+<div id="imageModal" class="image-modal" onclick="closeImage()">
+    <img id="modalImage" src="" alt="Sertifika">
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="container">
+        <p>
+            © 2026 Yunus Emre Özgel | Tüm Hakları Saklıdır.
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

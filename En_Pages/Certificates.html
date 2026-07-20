@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ================= META AND PAGE INFORMATION ================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Certificates of Yunus Emre Özgel in quality management, Lean Six Sigma, Kaizen, KUKA robot programming, Excel, and engineering tools.">
+    <link rel="icon" type="image/png" href="../images/Favicon.png">
+    <title>Certificates | Yunus Emre Özgel</title>
+
+    <!-- ================= CSS FILE ================= -->
+    <link rel="stylesheet" href="../Assets/style.css">
+
+</head>
+
+<body>
+
+    <!-- ================= JAVASCRIPT FILE ================= -->
+    <script src="../Assets/script.js"></script>
+
+    <!-- ================= HEADER ================= -->
+
+    <header>
+        <a href="index_en.html" class="logo">Yunus Emre Özgel</a>
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            &#9776;
+        </div>
+
+        <nav id="navbar">
+            <a href="index_en.html">Home</a>
+            <a href="About_Me.html">About Me</a>
+            <a href="Projects.html">Projects</a>
+            <a href="Certificates.html" class="active-page">Certificates</a>
+            <a href="Contact.html">Contact</a>
+
+            <div class="language-switch">
+                <a href="../Pages/Sertifikalar.html" class="language-btn active">TR</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= CERTIFICATES ================= -->
+
+    <section class="SertifikalarPage">
+
+        <h1>Certificates</h1>
+
+        <!-- ================= CERTIFICATE TABLE ================= -->
+        <table>
+
+            <tr>
+                <th>Certificate</th>
+                <th>Organization</th>
+                <th>Date</th>
+                <th>View</th>
+            </tr>
+
+            <tr>
+                <td data-label="Certificate">IATF 16949 Core Tools (APQP - PPAP - FMEA - SPC - MSA)</td>
+                <td data-label="Organization">Istanbul Quality Academy</td>
+                <td data-label="Date">08.05.2026</td>
+                <td data-label="View">
+                    <button class="btn1"
+                        onclick="openImage('../Sertifikalar/IATF16949_Core_Tools_Cert.jpg')">
+                        View Certificate
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td data-label="Certificate">ISO 9001 Quality Management</td>
+                <td data-label="Organization">Istanbul Quality Academy</td>
+                <td data-label="Date">28.04.2026</td>
+                <td data-label="View">
+                    <button class="btn1"
+                        onclick="openImage('../Sertifikalar/ISO9001_Cert.jpg')">
+                        View Certificate
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td data-label="Certificate">Lean Six Sigma Yellow Belt</td>
+                <td data-label="Organization">Six Sigma Academy Istanbul</td>
+                <td data-label="Date">20.04.2026</td>
+                <td data-label="View">
+                    <button class="btn1"
+                        onclick="openImage('../Sertifikalar/Lean_Six_Sigma_Cert.jpg')">
+                        View Certificate
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td data-label="Certificate">Kaizen – Continuous Improvement Training</td>
+                <td data-label="Organization">Engineering Academy</td>
+                <td data-label="Date">14.04.2026</td>
+                <td data-label="View">
+                    <button class="btn1"
+                        onclick="openImage('../Sertifikalar/Kaizen.jpg')">
+                        View Certificate
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td data-label="Certificate">Microsoft Excel - Excel from Beginner to Advanced</td>
+                <td data-label="Organization">Udemy</td>
+                <td data-label="Date">18.02.2026</td>
+                <td data-label="View">
+                    <button class="btn1"
+                        onclick="openImage('../Sertifikalar/Microsoft_Excell_Cert.jpg')">
+                        View Certificate
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td data-label="Certificate">Robot Programming Level 1</td>
+                <td data-label="Organization">KUKA</td>
+                <td data-label="Date">17.01.2025</td>
+                <td data-label="View">
+                    <button class="btn1"
+                        onclick="openImage('../Sertifikalar/Kuka_Robot_Programming_Cert.jpg')">
+                        View Certificate
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td data-label="Certificate">Complete SolidWorks Beginners Course</td>
+                <td data-label="Organization">Udemy</td>
+                <td data-label="Date">31.07.2023</td>
+                <td data-label="View">
+                    <button class="btn1"
+                        onclick="openImage('../Sertifikalar/Solidworks_Cert.jpg')">
+                        View Certificate
+                    </button>
+                </td>
+            </tr>
+
+        </table>
+
+    </section>
+
+    <!-- ================= CERTIFICATE IMAGE MODAL ================= -->
+    <div id="imageModal" class="image-modal" onclick="closeImage()">
+        <img id="modalImage" src="" alt="Certificate">
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+        <div class="container">
+            <p>
+                © 2026 Yunus Emre Özgel | All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

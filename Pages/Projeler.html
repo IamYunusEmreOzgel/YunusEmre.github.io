@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <!-- ================= META VE SAYFA BİLGİLERİ ================= -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yunus Emre Özgel tarafından görev alınan endüstriyel otomasyon, PLC programlama, robot entegrasyonu, kaynak hücresi, paketleme ve vision projeleri.">
+    <title>Projeler | Yunus Emre Özgel</title>
+    <link rel="icon" type="image/png" href="../images/Favicon.png">
+
+    <!-- ================= CSS DOSYASI ================= -->
+    <link rel="stylesheet" href="../Assets/style.css">
+</head>
+
+<body>
+    <!-- ================= JAVASCRIPT DOSYASI ================= -->
+    <script src="../Assets/script.js"></script>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+        <a href="../index.html" class="logo">Yunus Emre Özgel</a>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <nav id="navbar">
+            <a href="../index.html">Ana Sayfa</a>
+            <a href="Hakkimda.html">Hakkımda</a>
+            <a href="Projeler.html" class="active-page">Projeler</a>
+            <a href="Sertifikalar.html">Sertifikalar</a>
+            <a href="Iletisim.html">İletişim</a>
+            <div class="language-switch">
+                <a href="../En_Pages/Projects.html" class="language-btn active">EN</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ================= PROJELER ================= -->
+    <section class="ProjelerPage">
+        <h1>Projelerim</h1>
+
+        <!-- ================= PROJE SAYFASI AÇIKLAMA METNİ ================= -->
+        <p class="projects-text">
+            PLC programlama, endüstriyel robot entegrasyonu ve otomasyon sistemleri alanlarında görev aldığım projeler aşağıda yer almaktadır.
+        </p>
+
+        <!-- ================= PROJE LİSTESİ ================= -->
+        <section class="projects">
+
+            <!-- ================= ROBOTLU KAYNAK PROJELERİ ================= -->
+            <div class="project-category">
+                <h2>Robotlu Kaynak Projeleri</h2>
+            </div>
+
+            <!-- ================= MEGABRACE PROJESİ ================= -->
+            <details class="project">
+                <summary>MEGABRACE | Gazaltı Kaynak Hücresi</summary>
+                <p>H tipi pozisyoner üzerinde 3 fikstür bulunan ve toplam 3 Kuka robot ile çalışan çok robotlu gazaltı kaynak hücresi geliştirilmiştir. Hücrede farklı tiplerde 230 adet kaynak noktası bulunan parçaların kaynak operasyonları otomatik olarak gerçekleştirilmektedir. İki eksenli pozisyonerin hareketleri robot tarafından kontrol edilerek hücre içi eksen senkronizasyonu sağlanmış, robotlar arası çakışmayı önlemek amacıyla senkronizasyon algoritmaları oluşturulmuştur. Kaynak sıralamaları optimize edilerek toplam çevrim süresi 720 saniyeye düşürülmüş, Fronius TPS/i güç ünitesi kullanılarak PMC ve CMT kaynak modlarında kararlı ve tekrarlanabilir bir üretim yapısı elde edilmiştir.</p>
+                <h2>Projedeki Görevlerim</h2>
+                <div class="tech-list">
+                    <span>Robot programlarının geliştirilmesi</span>
+                    <span>H tipi pozisyoner hareket senaryolarının oluşturulması</span>
+                    <span>Robotlar arası çakışmayı önleyen senkronizasyon algoritmalarının geliştirilmesi</span>
+                    <span>Kaynak noktalarının sıralanarak çevrim süresinin optimize edilmesi</span>
+                    <span>Sistem testleri, devreye alma ve proses optimizasyonunun gerçekleştirilmesi</span>
+                </div>
+            </details>
+
+            <!-- ================= TRAVERSE PROJESİ ================= -->
+            <details class="project">
+                <summary>TRAVERSE | Gazaltı Kaynak Hücresi</summary>
+                <p>İki fikstürlü ve 1 adet ABB robot ile çalışan tam otomatik gazaltı kaynak hücresi geliştirilmiştir. Sistemde toplam 32 kaynak noktası, Fronius TPS/i serisi güç ünitesi kullanılarak otomatik olarak uygulanmaktadır. Kaynak prosesinde weaving tekniği kullanılmış, ABB BullsEye sistemi ile TCP kalibrasyonu gerçekleştirilerek kaynak hassasiyeti artırılmıştır. Robot programları ve PLC yazılımı geliştirilmiş, HMI ekranları ile alarm yönetimi oluşturulmuş, kaynak parametreleri ve çevrim süresi optimize edilerek kararlı ve verimli bir üretim süreci sağlanmıştır.</p>
+                <h2>Projedeki Görevlerim</h2>
+                <div class="tech-list">
+                    <span>ABB robot programlarının geliştirilmesi</span>
+                    <span>Weaving uygulamalarının gerçekleştirilmesi</span>
+                    <span>ABB BullsEye ile TCP kalibrasyonunun yapılması</span>
+                    <span>HMI ekranları ve alarm yönetiminin oluşturulması</span>
+                </div>
+            </details>
+
+            <!-- ================= CNEO PROJESİ ================= -->
+            <details class="project">
+                <summary>CNEO | Punta Kaynak Hücresi</summary>
+                <p>İki farklı hücreden oluşan tam otomatik punta kaynak sistemi, 7 fikstür ve 2 adet ABB robot kullanılarak geliştirilmiştir. Robotlar, AROGUN ile kaynak işlemlerini gerçekleştirirken kaynak kontrolü WTC Timer üzerinden sağlanmaktadır. Hücrelerde toplam 80'in üzerinde kaynak noktası bulunmakta olup hücre içi güvenlik altyapısı ışık bariyerleri ile PLC ve robot arasında kurulan güvenli bölge haberleşmesi kullanılarak oluşturulmuştur. PLC yazılımı ve safety konfigürasyonu hazırlanmış, kaynak parametreleri optimize edilerek prosesin kararlı ve güvenilir şekilde çalışması sağlanmıştır.</p>
+                <h2>Projedeki Görevlerim</h2>
+                <div class="tech-list">
+                    <span>Safety konfigürasyonunun oluşturulması</span>
+                    <span>ABB robot programlarının hazırlanması</span>
+                    <span>Fikstür çalışma senaryolarının geliştirilmesi</span>
+                    <span>WTC Weld Timer entegrasyonunun gerçekleştirilmesi</span>
+                    <span>Sistem testleri ve proses optimizasyonunun gerçekleştirilmesi</span>
+                </div>
+            </details>
+
+            <!-- ================= B1318 PROJESİ ================= -->
+            <details class="project">
+                <summary>B1318 | Punta Kaynak</summary>
+                <p>Tek fikstürlü ve bir adet ABB robot içeren tam otomatik punta kaynak hücresi geliştirilmiştir. Sistemde toplam 11 kaynak noktası, ARO Gun kullanılarak otomatik olarak uygulanmaktadır. Kaynak kontrolü Bosch Timer ile sağlanmış olup, robot ve fikstür senaryoları üretim akışına uygun şekilde tasarlanmıştır. HMI üzerinden alarm yönetimi ve üretim takip ekranları geliştirilmiştir.</p>
+                <h2>Projedeki Görevlerim</h2>
+                <div class="tech-list">
+                    <span>ABB robot programlarının geliştirilmesi</span>
+                    <span>Fikstür çalışma senaryolarının oluşturulması</span>
+                    <span>Bosch Timer ile kaynak kontrol entegrasyonunun sağlanması</span>
+                    <span>Parça sayacı ve çevrim takibi ekranlarının tasarlanması</span>
+                    <span>Çevrim süresinin optimize edilmesi ve sistem testlerinin gerçekleştirilmesi</span>
+                </div>
+            </details>
+
+            <!-- ================= PAKETLEME VE PALETLEME PROJELERİ ================= -->
+            <div class="project-category">
+                <h2>Paketleme ve Paletleme Projeleri</h2>
+            </div>
+
+            <!-- ================= B5 PROJESİ ================= -->
+            <details class="project">
+                <summary>B5 | Çay Bardağı Oto Dolum Hattı</summary>
+                <p>Çay bardağı üretim hattı çıkışına entegre edilen tam otomatik robotlu paketleme ve kolileme sistemi geliştirilmiştir. Sistem; pencere kutu, pasta kutu ve hediyelik kutu olmak üzere üç farklı paketleme tipini desteklemekte olup ürünleri otomatik olarak yönlendirmekte, kutuları oluşturarak güvenli şekilde paketlemektedir. Paketleme işleminin ardından ürünler otomatik olarak sevkiyat kolilerine aktarılmaktadır.</p>
+                <h2>Projedeki Görevlerim</h2>
+                <div class="tech-list">
+                    <span>PLC kontrol algoritmalarının geliştirilmesi</span>
+                    <span>Robot hareket senaryolarının oluşturulması</span>
+                    <span>Reçete tabanlı paketleme yönetiminin tasarlanması</span>
+                    <span>Konveyör ve robot senkronizasyonunun sağlanması</span>
+                    <span>Ürün birikmesini önleyen buffer sisteminin geliştirilmesi</span>
+                </div>
+            </details>
+
+            <!-- ================= BORCAM PROJESİ ================= -->
+            <details class="project">
+                <summary>BORCAM | Oto Dolum Hattı</summary>
+                <p>Fırın çıkışından gelen farklı ebat, yükseklik ve çaplardaki Borcam ürünlerinin güvenli ve verimli şekilde paketlenmesi amacıyla iki hücreden oluşan tam otomatik paketleme ve paletleme sistemi geliştirilmiştir. Sistem, farklı ürün ölçülerine uyum sağlayacak şekilde reçete tabanlı olarak tasarlanmış olup, ürünler servo kontrollü taşıma ve asansör mekanizması ile ara separatör kâğıt kullanılarak istenilen kat sayısında istiflenmektedir. İstiflenen ürünler robot destekli kutulama istasyonunda otomatik olarak kolilere yerleştirilmekte, bantlama işleminin ardından ikinci hücrede robot tarafından önceden tanımlanmış palet dizilim planına göre paletlenmektedir.</p>
+                <h2>Projedeki Görevlerim</h2>
+                <div class="tech-list">
+                    <span>Robot programlarının hazırlanması</span>
+                    <span>Reçete tabanlı ürün yönetiminin tasarlanması</span>
+                    <span>Ürün istifleme ve separatör kâğıt kontrol senaryolarının oluşturulması</span>
+                    <span>Ürün akışını dengeleyen kontrol algoritmalarının uygulanması</span>
+                    <span>Sistem devreye alma, test ve optimizasyon çalışmalarının gerçekleştirilmesi</span>
+                </div>
+            </details>
+
+            <!-- ================= GÖRÜNTÜ İŞLEME DESTEKLİ OTOMASYON PROJELERİ ================= -->
+            <div class="project-category">
+                <h2>Görüntü İşleme Destekli Otomasyon Projeleri</h2>
+            </div>
+
+            <!-- ================= TOPCOVER PROJESİ ================= -->
+            <details class="project">
+                <summary>TOPCOVER | SEALER</summary>
+                <p>İki farklı araç modeline ait akü haznesi üst kapakları için çift hücreli tam otomatik sealer uygulama ve inline kalite kontrol sistemi geliştirilmiştir. Her hücrede 4 robot ve 2 özel tasarım fikstür bulunan sistemde, robotlardan biri parça transferini gerçekleştirirken diğeri kamera kontrollü hassas silikon uygulamasını eş zamanlı olarak yürütmektedir. Bu paralel çalışma mimarisi sayesinde robot bekleme süreleri ortadan kaldırılarak çevrim süresi optimize edilmiş ve kesintisiz üretim sağlanmıştır. Silikon uygulamasının ardından parçalar, kamera tabanlı ölçüm istasyonunda kalınlık, genişlik ve derinlik parametreleri açısından %100 kontrol edilmekte, elde edilen ölçüm verileri Siemens PLC üzerinde işlenerek tarih ve saat bilgisi ile otomatik raporlanmakta ve Word formatında arşivlenmektedir.</p>
+                <h2>Projedeki Görevlerim</h2>
+                <div class="tech-list">
+                    <span>Robot entegrasyonlarının gerçekleştirilmesi</span>
+                    <span>Robotlar arası paralel çalışma ve senkronizasyon algoritmalarının geliştirilmesi</span>
+                    <span>Çevrim süresi optimizasyonu ve üretim performansının iyileştirilmesi</span>
+                </div>
+            </details>
+
+            <!-- ================= SK8 PROJESİ ================= -->
+            <details class="project">
+                <summary>SK8 | Lamine Cam Üretiminde Reçine Kalıntısı Temizleme</summary>
+                <p>Lamine cam üretim sürecinde cam yüzeyinde kalan reçine kalıntılarının giderilmesi amacıyla tam otomatik robotik temizleme hücresi geliştirilmiştir. Sistem; cam besleme robotu, braket varlık kontrolünü gerçekleştiren kamera sistemi, optik kusurları tespit eden ISRA Vision altyapısı ve cam yüzeyindeki kalıntıları temizleyen iki adet trim robotundan oluşmaktadır. Vision sistemi ile tespit edilen optik kusurlar doğrultusunda robot yörüngeleri dinamik olarak oluşturulmakta, braket varlık kontrolü sayesinde hatalı parçaların üretim hattına devam etmesi engellenmektedir. Robot programları geliştirilmiş, trim uygulamalarına ait yörüngeler optimize edilerek yüzey temizleme kalitesi ve proses kararlılığı artırılmıştır.</p>
+                <h2>Projedeki Görevlerim</h2>
+                <div class="tech-list">
+                    <span>Robot programlarının geliştirilmesi</span>
+                    <span>Braket varlık kamerasının optimizasyon çalışmalarının yapılması</span>
+                    <span>Trim robotlarının çalışma senaryolarının geliştirilmesi</span>
+                    <span>Robot yörüngeleri ve proses parametrelerinin optimize edilmesi</span>
+                    <span>Sistem testleri, devreye alma ve çevrim süresi optimizasyonunun gerçekleştirilmesi</span>
+                </div>
+            </details>
+
+            <!-- ================= TF6 PROJESİ ================= -->
+            <details class="project">
+                <summary>TF6 | Tamper Fırını Besleme Hattı</summary>
+                <p>Temper fırınına farklı modellerde paletlenmiş cam panellerin otomatik olarak beslenmesi amacıyla 3 adet KUKA robot ile çalışan tam otomatik yükleme sistemi geliştirilmiştir. Ürün üzerindeki logo kontrolü vision sistemi ile gerçekleştirilmiş, kartezyen servo kontrollü tabla kullanılarak açı ve pozisyon düzeltmeleri uygulanmıştır. Kamera verileri doğrultusunda robotların alma ve bırakma noktaları dinamik olarak hesaplanmış, çoklu robot koordinasyonu ile servo–robot senkronizasyonu sağlanarak sistemin güvenli ve verimli çalışması sağlanmıştır. Çevrim süresi iyileştirme çalışmaları ile üretim performansı optimize edilmiştir.</p>
+                <h2>Projedeki Görevlerim</h2>
+                <div class="tech-list">
+                    <span>KUKA robot programlarının geliştirilmesi</span>
+                    <span>Kamera verilerine göre dinamik pozisyon hesaplamalarının uygulanması</span>
+                    <span>Çoklu robot koordinasyon algoritmalarının oluşturulması</span>
+                    <span>Çevrim süresi optimizasyonu ve sistem performansının iyileştirilmesi</span>
+                    <span>Sistem testleri, devreye alma ve çevrim süresi optimizasyonunun gerçekleştirilmesi</span>
+                </div>
+            </details>
+
+            <!-- ================= SİMÜLASYON VE KİŞİSEL PROJELER ================= -->
+            <div class="project-category">
+                <h2>Simülasyon ve Kişisel Projeler</h2>
+            </div>
+
+            <!-- ================= ROBOT TABANLI SİMÜLASYON PROJESİ ================= -->
+            <details class="project">
+                <summary>Robot Tabanlı Parça Ayıklama ve Desen Uygulama Sistemi – Simülasyon Projesi</summary>
+                <p>Konveyör hattına gelen parçaların ölçü kontrolü gerçekleştirilerek uygun tolerans aralığında bulunan ürünler üzerine Mitsubishi Electric robot tarafından otomatik desen uygulaması yapılmaktadır. Tolerans dışındaki parçalar ise robot ve konveyör senaryosu kapsamında otomatik olarak hurda haznesine yönlendirilmektedir. Sistem, konveyör tracking yapısı sayesinde hareketli ürün üzerinde senkronize çalışacak şekilde tasarlanmış olup, hurda haznesinde 10 parça birikmesi durumunda çevrimi durduran ve operatör müdahalesi sonrasında üretimi güvenli şekilde yeniden başlatan kontrol algoritması geliştirilmiştir. Robot programları MELFA BASIC dili ile hazırlanmış, robot–konveyör haberleşmesi ve I/O entegrasyonları tamamlanmış, sistem simülasyonu RT ToolBox3 üzerinde doğrulanmıştır. Toplam çevrim süresi 21 saniye olarak optimize edilmiştir.</p>
+                <h2>Projedeki Görevlerim</h2>
+                <div class="tech-list">
+                    <span>MELFA BASIC robot programlarının hazırlanması</span>
+                    <span>Konveyör tracking senaryosunun oluşturulması</span>
+                    <span>Ölçü kontrol ve hurda ayırma algoritmasının geliştirilmesi</span>
+                    <span>RT ToolBox3 üzerinde simülasyon doğrulamasının yapılması</span>
+                </div>
+            </details>
+        </section>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Yunus Emre Özgel | Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+</body>
+</html>
